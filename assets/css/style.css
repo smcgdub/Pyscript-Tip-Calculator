@@ -11,3 +11,26 @@
 body {
   font-family: 'Baloo Bhaijaan 2', cursive !important;
 }
+
+#bill_total_input,
+#tip_percent_input,
+#number_of_people_input {
+  background-color: #306998;
+  color: #fff !important;
+}
+
+#bill_total_input::placeholder,
+#tip_percent_input::placeholder,
+#number_of_people_input::placeholder {
+  color: #fff !important;
+}
+
+#calculate_btn {
+  background-color: #FFD43B;
+  color: #000 !important;
+}
+
+#calculate_btn:hover {
+  background-color: #306998 !important;
+  color: #fff !important;
+}
