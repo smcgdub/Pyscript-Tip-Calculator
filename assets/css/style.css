@@ -34,3 +34,16 @@ body {
   background-color: #306998 !important;
   color: #fff !important;
 }
+
+#bill_total_display,
+#tip_percent_display,
+#each_person_pays_display {
+  background-color: #FFD43B;
+  color: #000 !important;
+}
+
+#bill_total_display::placeholder,
+#tip_percent_display::placeholder,
+#each_person_pays_display::placeholder {
+  color: #000 !important;
+}
