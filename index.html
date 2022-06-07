@@ -86,13 +86,28 @@
       <!-- Buttons -->
       <div class="row">
         <div class="col text-center text-md-start">
-          <button id="calculate_btn" type="submit" class="btn btn-success">Do the maths</button>
-          <button id="reset_btn" type="button" class="btn btn-dark">Reset Inputs</button>
+          <button id="calculate_btn" type="submit" class="btn btn-success" pys-onClick="calculate_btn">Do the maths</button>
+          <button id="reset_btn" type="button" class="btn btn-dark" pys-onClick="reset_btn">Reset Inputs</button>
         </div>
       </div>
     </div>
   </section>
 
+  <py-script>
+
+  bill_total_input = Element("bill_total_input")
+  tip_percent_input = Element("tip_percent_input")
+  number_of_people_input = Element("number_of_people_input")
+  bill_total_display = Element("bill_total_display")
+  tip_percent_display = Element("tip_percent_display")
+  number_of_people_display = Element("number_of_people_display")
+
+  def reset_btn(*args, **kwargs):
+      bill_total_input.clear()
+      tip_percent_input.clear()
+      number_of_people_input.clear()
+
+  </py-script>
   <!-- Horizontal Line -->
   <div class="container">
     <div class="row">
