@@ -86,26 +86,33 @@
       <!-- Buttons -->
       <div class="row">
         <div class="col text-center text-md-start">
-          <button id="calculate_btn" type="submit" class="btn btn-success" pys-onClick="calculate_btn">Do the maths</button>
-          <button id="reset_btn" type="button" class="btn btn-dark" pys-onClick="reset_btn">Reset Inputs</button>
+          <button id="calculate_btn" type="submit" class="btn" pys-onClick="calculate_btn">Do the maths</button>
+          <button id="reset_btn" type="submit" class="btn btn-dark" pys-onClick="reset_btn">Reset Inputs</button>
         </div>
       </div>
     </div>
   </section>
 
+  <p id="output">test</p>
+  
   <py-script>
 
-  bill_total_input = Element("bill_total_input")
-  tip_percent_input = Element("tip_percent_input")
-  number_of_people_input = Element("number_of_people_input")
-  bill_total_display = Element("bill_total_display")
-  tip_percent_display = Element("tip_percent_display")
-  number_of_people_display = Element("number_of_people_display")
+    bill_total_input = Element("bill_total_input")
+    tip_percent_input = Element("tip_percent_input")
+    number_of_people_input = Element("number_of_people_input")
+    bill_total_display = Element("bill_total_display")
+    tip_percent_display = Element("tip_percent_display")
+    number_of_people_display = Element("number_of_people_display")
+    op = Element("output")
 
-  def reset_btn(*args, **kwargs):
-      bill_total_input.clear()
-      tip_percent_input.clear()
-      number_of_people_input.clear()
+    def reset_btn(*args, **kwargs):
+        bill_total_input.clear()
+        tip_percent_input.clear()
+        number_of_people_input.clear()
+
+    def calculate_btn(*args, **kwargs):
+        total = bill_total_input * tip_percent_input
+        op.write(total)
 
   </py-script>
   <!-- Horizontal Line -->
