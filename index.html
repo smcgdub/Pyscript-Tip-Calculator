@@ -15,8 +15,6 @@
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
   <!-- Font Awesome CDN -->
   <script src="https://kit.fontawesome.com/debc4afe80.js" crossorigin="anonymous"></script>
-  <!-- External Css -->
-  <link rel="stylesheet" href="/assets/css/style.css">
   <title>Tip Calculator</title>
   <!-- Pyscript CDN -->
   <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
@@ -24,6 +22,8 @@
   <!-- JQuery -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"
     integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <!-- External Css -->
+  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
 <body>
@@ -74,7 +74,8 @@
           <label for="number_of_people_input">Number Of People</label>
           <div class="input-group mb-3">
             <input id="number_of_people_input" type="number" class="form-control" placeholder="0"
-              aria-label="number_of_people_input" aria-describedby="number_of_people_input" min="1" step="1" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
+              aria-label="number_of_people_input" aria-describedby="number_of_people_input" min="1" step="1"
+              onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
             <!-- <input id="number_of_people_input" type="number" class="form-control" placeholder="0" min="1" step="1"
               onkeypress="return event.charCode >= 48 && event.charCode <= 57" aria-label="number_of_people_input"
               aria-describedby="number_of_people_input" required> -->
@@ -92,7 +93,7 @@
       </div>
     </div>
   </section>
-  
+
   <py-script>
 
     bill_total_input = Element("bill_total_input")
@@ -110,8 +111,8 @@
         tip_percent_input.clear()
         number_of_people_input.clear()
         <!-- bill_total_display.clear()
-        tip_percent_display.clear()
-        each_person_pays_display.clear() -->
+                tip_percent_display.clear()
+                each_person_pays_display.clear() -->
 
     def calculate_btn(*args, **kwargs):
         tip_amount = float(bill_total_input.value) * int(tip_percent_input.value) / 100
@@ -141,19 +142,21 @@
           <!-- Bill & Tip Total -->
           <label for="bill_total_display">Bill & Tip Total</label>
           <div class="input-group mb-3">
-            <textarea id="bill_total_display" class="form-control pt-3" type="number" aria-label="With textarea" placeholder="0.00" aria-label="0.00" aria-describedby="bill_total_display" rows="1" disabled></textarea>
+            <textarea id="bill_total_display" class="form-control pt-3" type="number" aria-label="With textarea"
+              placeholder="0.00" aria-label="0.00" aria-describedby="bill_total_display" rows="1" disabled></textarea>
             <!-- <input id="bill_total_display" type="number" class="form-control" placeholder="0.00" aria-label="0.00"
               aria-describedby="bill_total_display"> -->
             <span class="input-group-text" id="cartoon_money_icon2"><img alt="image of a cartoon money"
                 src="https://img.icons8.com/doodle/40/000000/money.png" /></span>
-              </div>
+          </div>
 
           <!-- Total Tip Value -->
           <label for="tip_percent_display">Tip Amount</label>
           <div class="input-group mb-3">
-            <textarea id="tip_percent_display" class="form-control pt-3" type="number" aria-label="With textarea" placeholder="0.00" aria-label="0.00" aria-describedby="tip_percent_display" rows="1" disabled></textarea>
+            <textarea id="tip_percent_display" class="form-control pt-3" type="number" aria-label="With textarea"
+              placeholder="0.00" aria-label="0.00" aria-describedby="tip_percent_display" rows="1" disabled></textarea>
             <span class="input-group-text" id="hand_giving_tip_icon2"><img alt="image of a hand giving a tip"
-              src="https://img.icons8.com/external-filled-outline-lima-studio/40/000000/external-tip-hotel-filled-outline-lima-studio.png" /></span>
+                src="https://img.icons8.com/external-filled-outline-lima-studio/40/000000/external-tip-hotel-filled-outline-lima-studio.png" /></span>
             <!-- <input id="tip_percent_display" type="number" class="form-control" placeholder="0.00" aria-label="0.00"
               aria-describedby="tip_percent_display">              
             <span class="input-group-text" id="hand_giving_tip_icon2"><img alt="image of a hand giving a tip"
@@ -164,7 +167,9 @@
           <!-- Amount due per person -->
           <label for="each_person_pays_display">Each Person Pays</label>
           <div class="input-group mb-3">
-            <textarea id="each_person_pays_display" class="form-control pt-3" type="number" aria-label="With textarea" placeholder="0.00" aria-label="0.00" aria-describedby="each_person_pays_display" rows="1" disabled></textarea>
+            <textarea id="each_person_pays_display" class="form-control pt-3" type="number" aria-label="With textarea"
+              placeholder="0.00" aria-label="0.00" aria-describedby="each_person_pays_display" rows="1"
+              disabled></textarea>
             <!-- <input id="each_person_pays_display" type="number" class="form-control" placeholder="0.00" aria-label="0.00"
               aria-describedby="each_person_pays_display"> -->
             <span class="input-group-text" id="person_icon2"><img alt="image of a cartoon person"
